@@ -1,3 +1,3 @@
-export const defaultTitle = 'Wandace';
-export const defaultDescription = 'An omnichannel retail platform';
-export const defaultKeywords = 'unified, retail, omnichanel';
+export const defaultTitle = "Alexandra Acosta";
+export const defaultDescription = "Fullstack developer";
+export const defaultKeywords = "portfolio, web, app, development";

@@ -1,15 +1,11 @@
-import "@mantine/core/styles.css";
 import { MantineProvider } from "@mantine/core";
+import "@mantine/core/styles.css";
 import { Notifications } from "@mantine/notifications";
 import { type Session } from "next-auth";
 import { SessionProvider } from "next-auth/react";
 import { type AppType } from "next/app";
 import Head from "next/head";
-import {
-  defaultDescription,
-  defaultKeywords,
-  defaultTitle,
-} from "../../lib/constants";
+import { defaultKeywords, defaultTitle } from "../../lib/constants";
 import { theme } from "../../styles/theme";
 
 const MyApp: AppType<{ session: Session | null }> = ({
@@ -19,6 +15,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
   return (
     <>
       <Head>
+        <link rel="icon" href="/logo-black.png" />
         <title>{defaultTitle}</title>
         <meta property="og:title" content={defaultTitle} />
         {/* <meta name="description" content={defaultDescription} /> */}

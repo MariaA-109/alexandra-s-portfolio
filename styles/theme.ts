@@ -10,30 +10,11 @@ const poppins = Poppins({
 
 export const theme = createTheme({
   ...DEFAULT_THEME,
-  colors: {
-    navy: [
-      "#e0efff",
-      "#b1ceff",
-      "#80adff",
-      "#4f8cfe",
-      "#226bfd",
-      "#0e51e4",
-      "#053fb2",
-      "#002d80",
-      "#001b4f",
-      "#00091f",
-    ],
-  },
   fontFamily: poppins.style.fontFamily,
   fontFamilyMonospace: poppins.style.fontFamily,
-  primaryColor: "navy",
-  primaryShade: {
-    light: 7,
-    dark: 8,
-  },
   defaultGradient: {
-    from: "#A5D8FF",
-    to: "#B197FC",
+    from: "#eeaeca",
+    to: "#94bbe9",
     deg: 25,
   },
   breakpoints: {
