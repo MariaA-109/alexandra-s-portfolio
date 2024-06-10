@@ -1,3 +1,3 @@
 ## My portfolio
 
-<a href="alexandra-acosta.netlify.app/">🔗 Live Site</a>
+<a href="https://alexandra-acosta.netlify.app/">🔗 Live Site</a>
