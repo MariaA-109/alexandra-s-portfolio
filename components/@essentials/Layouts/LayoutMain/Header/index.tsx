@@ -61,7 +61,7 @@ const Navbar = () => {
                 variant="transparent"
                 c="black"
                 component="a"
-                href="/#contact"
+                href="mailto:acosta.alexandra@outlook.com"
               >
                 CONTACT ME
               </Button>
