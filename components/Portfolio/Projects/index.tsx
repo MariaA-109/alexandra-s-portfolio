@@ -16,6 +16,7 @@ import Link from "next/link";
 import heyDaisy from "../../../public/projects/heyDaisy.png";
 import Weather from "../../../public/projects/weather.png";
 import Wandace from "../../../public/projects/wandace.png";
+import Agency from "../../../public/projects/wandace-agency.png";
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -45,6 +46,7 @@ const ServiceCard = ({
   badges,
   liveLink,
   codeLink,
+  comingSoon,
 }: {
   image: string;
   title: string;
@@ -52,6 +54,7 @@ const ServiceCard = ({
   badges: string[];
   liveLink: string;
   codeLink: string;
+  comingSoon: boolean;
 }) => (
   <motion.div
     initial={{ opacity: 0, y: 50 }}
@@ -61,14 +64,7 @@ const ServiceCard = ({
   >
     <Card shadow="sm" padding="lg" radius="md" id="projects">
       <Box>
-        <Image
-          radius="md"
-          h={200}
-          w="100%"
-          fit="contain"
-          src={image}
-          alt="image"
-        />
+        <Image radius="md" w="100%" fit="cover" src={image} alt="image" />
       </Box>
       <Group p="center" grow mt="lg" mb="xs">
         <Text size="xl" fw={700} ta="center">
@@ -91,13 +87,21 @@ const ServiceCard = ({
       </Group>
 
       <Group justify="center" m="md">
-        <Link href={liveLink} passHref>
+        {liveLink ? (
+          <Link href={liveLink} passHref>
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              <Button variant="gradient" radius="sm">
+                LIVE
+              </Button>
+            </motion.div>
+          </Link>
+        ) : (
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            <Button variant="gradient" radius="sm">
+            <Button variant="filled" color="black" radius="sm" disabled>
               LIVE
             </Button>
           </motion.div>
-        </Link>
+        )}
         {codeLink ? (
           <Link href={codeLink} passHref>
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
@@ -112,6 +116,13 @@ const ServiceCard = ({
               CODE
             </Button>
           </motion.div>
+        )}
+        {comingSoon && (
+          <Group pos="relative" m="md">
+            <Badge radius="sm" variant="dot">
+              Coming Soon
+            </Badge>
+          </Group>
         )}
       </Group>
     </Card>
@@ -131,21 +142,45 @@ const Projects = () => {
     >
       <h1 className={classes.title}>Work Showcase</h1>
       <SimpleGrid
-        cols={{ base: 1, sm: 2, lg: 3 }}
+        cols={{ base: 1, sm: 2, lg: 2 }}
         spacing={{ base: 10, sm: "xl" }}
         verticalSpacing={{ base: "md", sm: "xl" }}
         p="xl"
+        w="80%"
       >
         <div>
           <ServiceCard
             image={Wandace.src}
             title="Wandace"
-            text="SAAS solution focused on optimizing content and inventory management for e-commerce. Specializing in providing scalable solutions to meet the unique needs of retail environments. Point-of-sale programming for seamless retail transactions."
+            text="SAAS solution focused on optimizing content and inventory management for e-commerce. Specializing in providing scalable solutions to meet the unique needs of retail environments."
             badges={["React.js", "Next.js", "TypeScript", "GraphQL"]}
             liveLink=""
             codeLink=""
+            comingSoon={true}
           />
         </div>
+        <div>
+          <ServiceCard
+            image={Agency.src}
+            title="Wandace Agency"
+            text="Wandace Agency specializes in scalable e-commerce solutions for retail environments, crafting custom platforms or utilizing WordPress to meet unique business needs and ensure seamless online experiences for customers."
+            badges={["React.js", "Next.js", "Mantine"]}
+            liveLink=""
+            codeLink=""
+            comingSoon={true}
+          />
+        </div>
+        {/* <div>
+          <ServiceCard
+            image={heIAds.src}
+            title="heIAds"
+            text="A language learning app that prioritizes community and events. Users can create profiles with their personal information and language learning preferences. They can then connect with others through chat or join planned events."
+            badges={["Hostinger"]}
+            liveLink="https://heydaisy-frontend.onrender.com/"
+            codeLink="https://github.com/MariaA-109/heyDaisy-frontend"
+            comingSoon={false}
+          />
+        </div> */}
         <div>
           <ServiceCard
             image={heyDaisy.src}
@@ -154,6 +189,7 @@ const Projects = () => {
             badges={["React.js", "daisyUI", "MongoDB", "Firebase"]}
             liveLink="https://heydaisy-frontend.onrender.com/"
             codeLink="https://github.com/MariaA-109/heyDaisy-frontend"
+            comingSoon={false}
           />
         </div>
         <div>
@@ -164,6 +200,7 @@ const Projects = () => {
             badges={["React.js", "daisyUI", "MongoDB", "Firebase"]}
             liveLink="https://weather-app-colors.netlify.app"
             codeLink="https://github.com/MariaA-109/weatherapp-react"
+            comingSoon={false}
           />
         </div>
       </SimpleGrid>

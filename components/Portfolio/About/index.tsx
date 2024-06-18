@@ -6,9 +6,17 @@ import {
   Group,
   Paper,
   Text,
+  Timeline,
   rem,
 } from "@mantine/core";
-import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
+import {
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconGitBranch,
+  IconGitCommit,
+  IconGitPullRequest,
+  IconMessageDots,
+} from "@tabler/icons-react";
 import Portfolio from "../../../public/about/portfolio.png";
 import { createStyles } from "@mantine/styles";
 import { motion } from "framer-motion";
@@ -66,7 +74,7 @@ const About = () => {
 
   return (
     <Container id="about">
-      <Flex direction="column" align="center" py="xl">
+      <Flex direction="column" align="center" py="lg">
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -126,18 +134,18 @@ const About = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className={classes.userText}
           >
-            <Text ta="justify" p="lg">
-              With a background in social studies, I transitioned into coding to
-              pursue a career as a Full Stack web and application developer. I
-              am driven to solve problems and actively learn various programming
-              languages, frameworks, and tools to create dynamic and
-              user-friendly websites and applications. At the moment, I&apos;m
-              collaborating with a mentor to develop a{" "}
+            <Text fz="lg" ta="justify" p="md" mt="md">
+              With a background in social studies and a passion for programming
+              and problem solving, I transitioned into a career as a Full Stack
+              web and application developer.
+            </Text>
+            <Text fz="lg" ta="justify" p="md">
+              As Co-Founder of Wandace, I lead information technology and
+              product strategy, spearheading the development of a {""}
               <span className={classes.gradientText}>SAAS solution </span>
-              aimed at streamlining content management for e-commerce companies
-              and providing scalability solutions for retail. I&apos;ve been
-              involved in the project from the very beginning, primarily
-              focusing on POS (Point of Sale) programming.
+              designed to optimize content and inventory management for
+              e-commerce. I specialize in creating scalable solutions tailored
+              to the unique needs of the retail sector.
             </Text>
           </motion.div>
         </Flex>
