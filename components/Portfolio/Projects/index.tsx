@@ -64,7 +64,14 @@ const ServiceCard = ({
   >
     <Card shadow="sm" padding="lg" radius="md" id="projects">
       <Box>
-        <Image radius="md" w="100%" fit="cover" src={image} alt="image" />
+        <Image
+          radius="md"
+          h={200}
+          w="100%"
+          fit="fill"
+          src={image}
+          alt="image"
+        />
       </Box>
       <Group p="center" grow mt="lg" mb="xs">
         <Text size="xl" fw={700} ta="center">
@@ -185,7 +192,7 @@ const Projects = () => {
           <ServiceCard
             image={heyDaisy.src}
             title="heyDaisy"
-            text="A language learning app that prioritizes community and events. Users can create profiles with their personal information and language learning preferences. They can then connect with others through chat or join planned events."
+            text="A language learning app that prioritizes community and events. Users can create profiles with their personal information and language learning preferences. They can connect with others through chat or join planned events."
             badges={["React.js", "daisyUI", "MongoDB", "Firebase"]}
             liveLink="https://heydaisy-frontend.onrender.com/"
             codeLink="https://github.com/MariaA-109/heyDaisy-frontend"
