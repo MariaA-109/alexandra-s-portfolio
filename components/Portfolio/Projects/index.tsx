@@ -49,7 +49,7 @@ const Projects = () => {
             comingSoon={true}
           />
         </div>
-        <div>
+        {/* <div>
           <ServiceCard
             image={heIAds.src}
             title="heIAds"
@@ -59,7 +59,7 @@ const Projects = () => {
             codeLink="https://github.com/MariaA-109/heyDaisy-frontend"
             comingSoon={true}
           />
-        </div>
+        </div> */}
         <div>
           <ServiceCard
             image={heyDaisy.src}
