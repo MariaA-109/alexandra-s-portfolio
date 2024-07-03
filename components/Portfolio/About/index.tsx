@@ -6,21 +6,13 @@ import {
   Group,
   Paper,
   Text,
-  Timeline,
   rem,
 } from "@mantine/core";
-import {
-  IconBrandGithub,
-  IconBrandLinkedin,
-  IconGitBranch,
-  IconGitCommit,
-  IconGitPullRequest,
-  IconMessageDots,
-} from "@tabler/icons-react";
-import Portfolio from "../../../public/about/portfolio.png";
 import { createStyles } from "@mantine/styles";
+import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Portfolio from "../../../public/about/portfolio.png";
 
 const useStyles = createStyles((theme) => ({
   title: {

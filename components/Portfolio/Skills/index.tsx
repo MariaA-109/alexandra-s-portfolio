@@ -33,7 +33,7 @@ const Skills = () => {
   const { classes } = useStyles();
 
   return (
-    <Container p="5rem">
+    <Container mt="1rem" mb="4rem" p="lg">
       <Flex justify="center" align="center">
         <motion.h1
           initial={{ opacity: 0, y: 50 }}

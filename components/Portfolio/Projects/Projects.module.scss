@@ -1,0 +1,45 @@
+.wrapper {
+  padding: 8rem 0;
+  @media (max-width: 50em) {
+    padding: 2rem 0;
+  }
+}
+
+.title {
+  font-size: 62px;
+  font-weight: 900;
+  line-height: 1.1;
+  justify-content: center;
+  text-align: center;
+  padding: 8rem 0;
+  @media (max-width: 990px) {
+    text-align: center;
+    font-size: 4rem;
+    line-height: 1.2;
+  }
+  @media (max-width: 500px) {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 3.2rem;
+  }
+  @media (max-width: 400px) {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+}
+
+.img {
+  object-fit: cover;
+  width: 100%;
+  height: 55vh;
+  position: relative;
+  @media (max-width: 980px) {
+    height: 40vh;
+  }
+  @media (max-width: 710px) {
+    height: 30vh;
+  }
+  @media (max-width: 645px) {
+    height: 20vh;
+  }
+}

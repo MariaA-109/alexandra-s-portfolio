@@ -10,10 +10,15 @@ const useStyles = createStyles((theme) => ({
     height: "100%",
   },
   img: {
-    objectFit: "cover",
     width: "100%",
-    height: "30vh",
+    height: "50vh",
     position: "relative",
+    [theme.fn.smallerThan("md")]: {
+      height: "40vh",
+    },
+    [theme.fn.smallerThan("sm")]: {
+      height: "20vh",
+    },
   },
 }));
 

@@ -1,58 +1,37 @@
-import { Flex, SimpleGrid, rem } from "@mantine/core";
-import { createStyles } from "@mantine/styles";
+import { Container, Flex, Group, SimpleGrid, Text } from "@mantine/core";
 import heIAds from "../../../public/projects/heIAds.png";
 import heyDaisy from "../../../public/projects/heyDaisy.png";
 import Agency from "../../../public/projects/wandace-agency.png";
 import Wandace from "../../../public/projects/wandace.png";
 import Weather from "../../../public/projects/weather.png";
 import ServiceCard from "../../@essentials/ServiceCard";
-
-const useStyles = createStyles((theme) => ({
-  wrapper: {
-    position: "relative",
-    boxSizing: "border-box",
-    justifyContent: "center",
-    backgroundColor: theme.colorScheme === "dark" ? "#1f1f1f" : "#f9f9f9",
-    marginTop: rem(90),
-  },
-  title: {
-    fontSize: rem(62),
-    fontWeight: 900,
-    lineHeight: 1.5,
-    color: theme.colorScheme === "dark" ? "#fff" : "#000",
-    [theme.breakpoints.sm]: {
-      fontSize: rem(42),
-      lineHeight: 1.2,
-      textAlign: "center",
-    },
-  },
-}));
+import classes from "./Projects.module.scss";
 
 const Projects = () => {
-  const { classes } = useStyles();
-
   return (
-    <Flex
-      direction="column"
-      justify="center"
-      align="center"
-      py="xl"
-      className={classes.wrapper}
+    <Container
       id="projects"
+      mt="4rem"
+      mb="4rem"
+      fluid
+      className={classes.wrapper}
     >
-      <h1 className={classes.title}>Work Showcase</h1>
+      <Flex h="100%" align="center" justify="center">
+        <Group className={classes.title}>
+          <Text inherit>Work Showcase</Text>
+        </Group>
+      </Flex>
       <SimpleGrid
         cols={{ base: 1, sm: 2, lg: 2 }}
         spacing={{ base: 10, sm: "xl" }}
         verticalSpacing={{ base: "md", sm: "xl" }}
         p="xl"
-        w="80%"
       >
         <div>
           <ServiceCard
             image={Wandace.src}
             title="Wandace"
-            text="SAAS solution focused on optimizing content and inventory management for e-commerce. Specializing in providing scalable solutions to meet the unique needs of retail environments."
+            text="SAAS solution that helps retailers sell wherever and whenever by making it very easy to expand from the smallest to the largest size. Wandace connects to important e-commerce outlets like Amazon, to services like Woocomerce, and even to your own physical and online shops."
             badges={["React.js", "Next.js", "TypeScript", "GraphQL"]}
             liveLink=""
             codeLink=""
@@ -70,7 +49,7 @@ const Projects = () => {
             comingSoon={true}
           />
         </div>
-        {/* <div>
+        <div>
           <ServiceCard
             image={heIAds.src}
             title="heIAds"
@@ -80,7 +59,7 @@ const Projects = () => {
             codeLink="https://github.com/MariaA-109/heyDaisy-frontend"
             comingSoon={true}
           />
-        </div> */}
+        </div>
         <div>
           <ServiceCard
             image={heyDaisy.src}
@@ -104,7 +83,7 @@ const Projects = () => {
           />
         </div>
       </SimpleGrid>
-    </Flex>
+    </Container>
   );
 };
 
