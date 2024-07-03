@@ -19,7 +19,6 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
-    fontFamily: "Greycliff CF, var(--mantine-font-family)",
     fontSize: rem(72),
     fontWeight: 900,
     lineHeight: 1.1,
@@ -52,7 +51,6 @@ const useStyles = createStyles((theme) => ({
     height: rem(54),
     paddingLeft: rem(38),
     paddingRight: rem(38),
-
     [theme.breakpoints.sm]: {
       height: rem(54),
       paddingLeft: rem(18),
