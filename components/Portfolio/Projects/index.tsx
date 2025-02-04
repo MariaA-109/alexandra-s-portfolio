@@ -11,8 +11,8 @@ const Projects = () => {
   return (
     <Container
       id="projects"
-      mt="4rem"
-      mb="4rem"
+      mt="2rem"
+      mb="2rem"
       fluid
       className={classes.wrapper}
     >
