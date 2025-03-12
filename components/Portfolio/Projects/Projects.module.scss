@@ -61,3 +61,8 @@
     transform 150ms ease,
     box-shadow 100ms ease;
 }
+.carousel {
+  @media (max-width: 980px) {
+    padding: 1rem;
+  }
+}

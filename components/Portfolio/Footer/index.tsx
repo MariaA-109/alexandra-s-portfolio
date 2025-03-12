@@ -14,7 +14,7 @@ import { motion } from "framer-motion";
 
 const useStyles = createStyles((theme) => ({
   footer: {
-    marginTop: rem(62),
+    marginTop: rem(52),
     borderTop:
       "rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5))",
   },

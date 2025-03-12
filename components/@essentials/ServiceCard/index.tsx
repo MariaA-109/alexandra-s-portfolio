@@ -7,7 +7,7 @@ import Image from "next/image";
 const useStyles = createStyles((theme) => ({
   card: {
     width: "100%",
-    height: "100%",
+    minHeight: "500px",
     padding: "2rem",
     position: "relative",
     overflow: "hidden",
@@ -19,18 +19,7 @@ const useStyles = createStyles((theme) => ({
       "1px 1px 1px rgba(0, 0, 0, 0.1), -1px 1px 3px rgba(0, 0, 0, 0.1), 0px 5px 10px rgba(0, 0, 0, 0.2)",
     transition: "transform 150ms ease, box-shadow 100ms ease",
     [theme.breakpoints.sm]: {
-      width: "100%",
-      height: "100%",
-      padding: "2rem",
-      position: "relative",
-      overflow: "hidden",
-      borderRadius: "20px",
-      border: "1px solid #000000",
-      borderLeftWidth: "2px",
-      borderRightWidth: "2px",
-      boxShadow:
-        "1px 1px 1px rgba(0, 0, 0, 0.1), -1px 1px 3px rgba(0, 0, 0, 0.1), 0px 5px 10px rgba(0, 0, 0, 0.2)",
-      transition: "transform 150ms ease, box-shadow 100ms ease",
+      minHeight: "500px", 
     },
   },
   img: {
@@ -66,11 +55,12 @@ const ServiceCard = ({
   const { classes } = useStyles();
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.2 }}
-      whileHover={{ scale: 1.05 }}
-    >
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.7, ease: "easeOut" }}
+    whileHover={{ scale: 1.005 }}
+  >
+  
       <Card
         shadow="sm"
         padding="lg"

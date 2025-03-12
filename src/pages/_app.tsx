@@ -7,6 +7,7 @@ import { type AppType } from "next/app";
 import Head from "next/head";
 import { defaultKeywords, defaultTitle } from "../../lib/constants";
 import { theme } from "../../styles/theme";
+import '@mantine/carousel/styles.css';
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,

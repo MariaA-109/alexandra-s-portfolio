@@ -6,6 +6,7 @@ import Wandace from "../../../public/projects/wandace.png";
 import Weather from "../../../public/projects/weather.png";
 import ServiceCard from "../../@essentials/ServiceCard";
 import classes from "./Projects.module.scss";
+import { Carousel } from '@mantine/carousel';
 
 const Projects = () => {
   return (
@@ -14,30 +15,28 @@ const Projects = () => {
       fluid
       className={classes.wrapper}
     >
+     
       <Flex h="100%" align="center" justify="center">
         <Group className={classes.title}>
           <Text inherit>Work Showcase</Text>
         </Group>
       </Flex>
-      <SimpleGrid
-        cols={{ base: 1, sm: 2, lg: 2 }}
-        spacing={{ base: 10, sm: "xl" }}
-        verticalSpacing={{ base: "md", sm: "xl" }}
-        p="xl"
-      >
-        <div>
+      <Carousel className={classes.carousel}
+      
+      height={600}  loop dragFree slideSize={{ base: '100%', sm: '50%', md: '33.333333%' }}
+      slideGap={{ base: 'sm', sm: 'md' }}>
+      <Carousel.Slide>
           <ServiceCard
-            
             image={Wandace.src}
             title="Wandace App"
-            text="SAAS solution that helps retailers sell wherever and whenever by making it very easy to expand from the smallest to the largest size. Wandace connects to important e-commerce outlets like Amazon, to services like Woocomerce, and even to your own physical and online shops."
+            text="Wandace is an AI-powered e-commerce tool that simplifies product feed management, helping retailers scale effortlessly across online and physical stores. It integrates with Meta, WooCommerce, and more to maximize sales."
             badges={["React.js", "Next.js", "TypeScript", "GraphQL"]}
             liveLink="https://app.wandace.com/auth/login"
             codeLink=""
             comingSoon={false}
           />
-        </div>
-        <div>
+    </Carousel.Slide>
+    <Carousel.Slide>
           <ServiceCard
             image={Agency.src}
             title="Wandace Agency"
@@ -47,8 +46,8 @@ const Projects = () => {
             codeLink=""
             comingSoon={false}
           />
-        </div>
-        <div>
+      </Carousel.Slide>
+      <Carousel.Slide>
           <ServiceCard
             image={heIAds.src}
             title="heIAds"
@@ -56,10 +55,10 @@ const Projects = () => {
             badges={["Hostinger"]}
             liveLink="https://heiads.ai/"
             codeLink=""
-            comingSoon={true}
+            comingSoon={false}
           />
-        </div>
-        <div>
+       </Carousel.Slide>
+       <Carousel.Slide>
           <ServiceCard
             image={heyDaisy.src}
             title="heyDaisy"
@@ -69,8 +68,8 @@ const Projects = () => {
             codeLink="https://github.com/MariaA-109/heyDaisy-frontend"
             comingSoon={false}
           />
-        </div>
-        <div>
+        </Carousel.Slide>
+        <Carousel.Slide>
           <ServiceCard
             image={Weather.src}
             title="Weather App"
@@ -80,8 +79,8 @@ const Projects = () => {
             codeLink="https://github.com/MariaA-109/weatherapp-react"
             comingSoon={false}
           />
-        </div>
-      </SimpleGrid>
+        </Carousel.Slide>
+      </Carousel>
     </Container>
   );
 };
