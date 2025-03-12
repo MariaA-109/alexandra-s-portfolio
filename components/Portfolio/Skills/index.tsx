@@ -76,6 +76,7 @@ const Skills = () => {
             <Pill size="md">Express</Pill>
             <Pill size="md">Bootstrap</Pill>
             <Pill size="md">daisyUI</Pill>
+            <Pill size="md">GitHub</Pill>
           </Group>
           <Text size="xs" mt={4}>
             2023
@@ -94,6 +95,7 @@ const Skills = () => {
             <Pill size="md">VSCode</Pill>
             <Pill size="md">GitHub</Pill>
             <Pill size="md">Hosting</Pill>
+            
           </Group>
           <Text size="xs" mt={4}>
             2022/2023
