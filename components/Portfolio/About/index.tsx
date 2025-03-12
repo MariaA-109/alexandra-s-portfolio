@@ -59,6 +59,19 @@ const useStyles = createStyles((theme) => ({
     fontWeight: "bold",
     WebkitTextFillColor: "transparent",
   },
+  card: {
+      padding: "2rem",
+      position: "relative",
+      overflow: "hidden",
+      borderRadius: "20px",
+      border: "1px solid #000000",
+      borderLeftWidth: "2px",
+      borderRightWidth: "2px",
+      boxShadow:
+        "1px 1px 1px rgba(0, 0, 0, 0.1), -1px 1px 3px rgba(0, 0, 0, 0.1), 0px 5px 10px rgba(0, 0, 0, 0.2)",
+      transition: "transform 150ms ease, box-shadow 100ms ease",
+      
+  },  
 }));
 
 const About = () => {
@@ -66,7 +79,7 @@ const About = () => {
 
   return (
     <Container id="about">
-      <Flex direction="column" align="center" py="lg">
+      <Flex direction="column" align="center" py="xs">
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -75,14 +88,14 @@ const About = () => {
         >
           About
         </motion.h1>
-        <Flex className={classes.content} mt="lg">
+        <Flex className={classes.content} mt="lg ">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className={classes.userCard}
           >
-            <Paper radius="md" withBorder p="lg" bg="var(--mantine-color-body)">
+            <Paper radius="md" className={classes.card} p="lg" bg="var(--mantine-color-body)" >
               <Avatar src={Portfolio.src} size={120} radius={120} mx="auto" />
               <Text ta="center" fz="lg" fw={500} mt="md">
                 Alexandra Acosta

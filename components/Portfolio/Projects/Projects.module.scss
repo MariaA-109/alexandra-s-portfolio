@@ -1,5 +1,5 @@
 .wrapper {
-  padding: 8rem 0;
+  padding: 3rem 0;
   @media (max-width: 50em) {
     padding: 2rem 0;
   }
@@ -43,4 +43,21 @@
   @media (max-width: 645px) {
     height: 20vh;
   }
+}
+
+.card {
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid #000000;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  box-shadow:
+    1px 1px 1px rgba(0, 0, 0, 0.1),
+    -1px 1px 3px rgba(0, 0, 0, 0.1),
+    0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 150ms ease,
+    box-shadow 100ms ease;
 }

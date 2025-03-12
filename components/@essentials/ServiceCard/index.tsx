@@ -8,10 +8,34 @@ const useStyles = createStyles((theme) => ({
   card: {
     width: "100%",
     height: "100%",
+    padding: "2rem",
+    position: "relative",
+    overflow: "hidden",
+    borderRadius: "20px",
+    border: "1px solid #000000",
+    borderLeftWidth: "2px",
+    borderRightWidth: "2px",
+    boxShadow:
+      "1px 1px 1px rgba(0, 0, 0, 0.1), -1px 1px 3px rgba(0, 0, 0, 0.1), 0px 5px 10px rgba(0, 0, 0, 0.2)",
+    transition: "transform 150ms ease, box-shadow 100ms ease",
+    [theme.breakpoints.sm]: {
+      width: "100%",
+      height: "100%",
+      padding: "2rem",
+      position: "relative",
+      overflow: "hidden",
+      borderRadius: "20px",
+      border: "1px solid #000000",
+      borderLeftWidth: "2px",
+      borderRightWidth: "2px",
+      boxShadow:
+        "1px 1px 1px rgba(0, 0, 0, 0.1), -1px 1px 3px rgba(0, 0, 0, 0.1), 0px 5px 10px rgba(0, 0, 0, 0.2)",
+      transition: "transform 150ms ease, box-shadow 100ms ease",
+    },
   },
   img: {
     width: "100%",
-    height: "50vh",
+    height: "30vh",
     position: "relative",
     [theme.fn.smallerThan("md")]: {
       height: "40vh",

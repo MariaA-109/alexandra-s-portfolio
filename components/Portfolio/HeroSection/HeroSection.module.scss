@@ -2,7 +2,7 @@
   position: relative;
   box-sizing: border-box;
   overflow: hidden;
-  padding: 8rem 0;
+  padding: 4rem 0;
   @media (max-width: 50em) {
     padding: 2rem 0;
   }
@@ -22,7 +22,6 @@
   font-size: 5rem;
   font-weight: 900;
   line-height: 1.1;
-
   @media (max-width: 500px) {
     font-size: 4rem;
     line-height: 1.2;

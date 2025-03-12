@@ -10,9 +10,7 @@ import classes from "./Projects.module.scss";
 const Projects = () => {
   return (
     <Container
-      id="projects"
-      mt="2rem"
-      mb="2rem"
+      id="projects" 
       fluid
       className={classes.wrapper}
     >
@@ -29,13 +27,14 @@ const Projects = () => {
       >
         <div>
           <ServiceCard
+            
             image={Wandace.src}
-            title="Wandace"
+            title="Wandace App"
             text="SAAS solution that helps retailers sell wherever and whenever by making it very easy to expand from the smallest to the largest size. Wandace connects to important e-commerce outlets like Amazon, to services like Woocomerce, and even to your own physical and online shops."
             badges={["React.js", "Next.js", "TypeScript", "GraphQL"]}
-            liveLink=""
+            liveLink="https://app.wandace.com/auth/login"
             codeLink=""
-            comingSoon={true}
+            comingSoon={false}
           />
         </div>
         <div>
@@ -44,22 +43,22 @@ const Projects = () => {
             title="Wandace Agency"
             text="Wandace Agency specializes in scalable e-commerce solutions for retail environments, crafting custom platforms or utilizing WordPress to meet unique business needs and ensure seamless online experiences for customers."
             badges={["React.js", "Next.js", "Mantine"]}
-            liveLink=""
+            liveLink="https://wandace.com/en/agency"
             codeLink=""
-            comingSoon={true}
+            comingSoon={false}
           />
         </div>
-        {/* <div>
+        <div>
           <ServiceCard
             image={heIAds.src}
             title="heIAds"
             text="A language learning app that prioritizes community and events. Users can create profiles with their personal information and language learning preferences. They can then connect with others through chat or join planned events."
             badges={["Hostinger"]}
-            liveLink="https://heydaisy-frontend.onrender.com/"
-            codeLink="https://github.com/MariaA-109/heyDaisy-frontend"
+            liveLink="https://heiads.ai/"
+            codeLink=""
             comingSoon={true}
           />
-        </div> */}
+        </div>
         <div>
           <ServiceCard
             image={heyDaisy.src}

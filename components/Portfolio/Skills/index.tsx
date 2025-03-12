@@ -33,7 +33,7 @@ const Skills = () => {
   const { classes } = useStyles();
 
   return (
-    <Container mt="1rem" mb="4rem" p="lg">
+    <Container  p="lg">
       <Flex justify="center" align="center">
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
@@ -54,9 +54,11 @@ const Skills = () => {
             <Pill size="md">Hostinger</Pill>
             <Pill size="md">Hubspot</Pill>
             <Pill size="md">Mantine</Pill>
+            <Pill size="md">Docker</Pill>
+            <Pill size="md">Crowndin</Pill>
           </Group>
           <Text size="xs" mt={4}>
-            2023/2024
+            2023-now
           </Text>
         </Timeline.Item>
 
